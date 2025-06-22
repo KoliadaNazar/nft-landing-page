@@ -1,0 +1,58 @@
+
+//
+.main {
+  @include flex-column;
+  align-items: center;
+}
+
+.button-secondary {
+  
+  background: rgba(173, 26, 175, 0.05);
+  padding: 4px 16px;
+  text-wrap: nowrap;
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--button-violet);
+  height: 42px;
+  min-width: 150px;
+  font-size: 20px;
+  transition: box-shadow 0.2s ease-in-out;
+
+  @include laptop-min-width {
+    height: 70px;
+    min-width: 214px;
+    font-size: 22px;
+  }
+  
+}
+
+.button-secondary:before,
+.button-secondary:after {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--button-violet);
+
+    @include laptop-min-width {
+      width: 5px;
+      height: 44px;
+  }
+}
+
+.button-secondary:before {
+  left: -6px;
+}
+
+.button-secondary:after {
+  right: -6px;
+}
+
+.button-secondary:hover {
+  box-shadow: 
+  0 0 10px 6px rgba(173, 26, 175, 0.2),
+  inset 0 0 10px 6px rgba(173, 26, 175, 0.2);
+}

@@ -1,0 +1,154 @@
+.header {
+  margin: 0 auto;
+  max-width: 600px;
+     @include laptop-min-width {
+           max-width: 1918px;
+      }
+}
+
+.header__inner {
+  padding: 3%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 70px 1fr;
+
+     @include mobile-min-width {
+      grid-template-columns: 1fr 1fr;
+      padding: 14px 34px; 
+      row-gap: 8px;
+    }
+
+    @include laptop-min-width {
+           grid-template-columns: 1fr 1fr 1fr;
+           grid-template-rows: auto;
+           padding: 16px 30px; 
+      }
+
+    @include desktop-min-width {
+      padding: 40px 120px;
+      
+    }
+}
+
+.header__nav {
+  grid-area: 2 / 1 / 3 / 4;
+  justify-self: center;
+
+    @include laptop-min-width {
+          grid-area: 1 / 2 / 2 / 3;
+      }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  min-height: 50px;
+  padding: 0 20px;
+
+    @include laptop-min-width {
+      height: 60px;
+      flex-wrap: nowrap;
+      font-size: 14px;
+    }
+
+      @include desktop_large-min-width {
+        font-size: 18px;
+        height: 80px;
+        padding: 0 50px;
+        gap: 50px;
+      } 
+}
+
+.header__nav-link {
+  white-space: nowrap;
+  position: relative;
+  padding: 14px 0;
+}
+
+.header__nav-link:after {
+  transition: width 0.2s ease;
+  position: absolute;
+  content: '';
+  bottom: 12px;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__nav-link:hover:after {
+  width: 100%;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+    @include laptop-min-width{
+        justify-self: start;
+    }
+}
+
+.header__logo-img {
+  width: 46px;
+  height: 46px;
+
+  @include mobile-min-width{
+     width: 64px;
+      height: 64px;
+  }
+
+    @include laptop-min-width {
+        width: 92px;
+        height: 92px;
+      }
+}
+
+.header__logo-text {
+  font-size: 20px;
+  font-weight: 600;
+
+   @include mobile-min-width{
+     font-size: 28px;
+  }
+
+    @include laptop-min-width{
+       font-size: 42px;
+    }
+
+      @include desktop-min-width {
+        font-weight: 700;
+        font-size: 50px;
+      }
+  
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  @include mobile-min-width{
+    gap: 16px;
+    margin-left: 0;
+  }
+
+    @include laptop-min-width{
+        justify-self: end;
+    }
+
+    @include desktop_large-min-width{
+    gap: 30px;
+  }
+}
+
+.header__icon-wrap {
+  flex-shrink: 0;
+}
