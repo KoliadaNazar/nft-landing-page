@@ -1,6 +1,6 @@
 .header {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
      @include laptop-min-width {
            max-width: 1918px;
       }
@@ -16,17 +16,18 @@
      @include mobile-min-width {
       grid-template-columns: 1fr 1fr;
       padding: 14px 34px; 
-      row-gap: 8px;
+      row-gap: 12px;
     }
 
     @include laptop-min-width {
-           grid-template-columns: 1fr 1fr 1fr;
+           grid-template-columns: max-content 1fr max-content;
            grid-template-rows: auto;
            padding: 16px 30px; 
       }
 
     @include desktop-min-width {
       padding: 40px 120px;
+      grid-template-columns: 1fr 1fr 1fr;
       
     }
 }
@@ -54,7 +55,7 @@
     @include laptop-min-width {
       height: 60px;
       flex-wrap: nowrap;
-      font-size: 14px;
+      font-size: 14px
     }
 
       @include desktop_large-min-width {
@@ -90,7 +91,8 @@
 .header__logo {
   display: flex;
   align-items: center;
-    @include laptop-min-width{
+
+      @include tablet-min-width{
         justify-self: start;
     }
 }
@@ -140,7 +142,7 @@
     margin-left: 0;
   }
 
-    @include laptop-min-width{
+    @include tablet-min-width{
         justify-self: end;
     }
 

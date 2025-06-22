@@ -260,7 +260,7 @@ svg * {
 }
 .header {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 @media (min-width: 1024px) {
   .header {
@@ -279,12 +279,12 @@ svg * {
   .header__inner {
     grid-template-columns: 1fr 1fr;
     padding: 14px 34px;
-    row-gap: 8px;
+    row-gap: 12px;
   }
 }
 @media (min-width: 1024px) {
   .header__inner {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: max-content 1fr max-content;
     grid-template-rows: auto;
     padding: 16px 30px;
   }
@@ -292,6 +292,7 @@ svg * {
 @media (min-width: 1280px) {
   .header__inner {
     padding: 40px 120px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -359,7 +360,7 @@ svg * {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__logo {
     justify-self: start;
   }
@@ -415,7 +416,7 @@ svg * {
     margin-left: 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__actions {
     justify-self: end;
   }
@@ -440,6 +441,7 @@ svg * {
   height: 30px;
   min-width: 120px;
   font-size: 14px;
+  transition: color 0.2s ease-in-out;
 }
 @media (min-width: 1024px) {
   .button {
@@ -599,7 +601,7 @@ svg * {
 }
 
 .button-secondary:hover {
-  box-shadow: 0 0 10px 6px rgba(173, 26, 175, 0.2), inset 0 0 10px 6px rgba(173, 26, 175, 0.2);
+  box-shadow: 0 0 10px 6px rgba(173, 26, 175, 0.2), inset 0 0 10px 8px rgba(173, 26, 175, 0.2);
 }
 
 .button-ternary {
@@ -661,6 +663,7 @@ svg * {
 
 .dashboard__info {
   justify-self: center;
+  text-align: center;
   display: grid;
   grid-template-rows: max-content max-content max-content;
   row-gap: 28px;
@@ -668,6 +671,7 @@ svg * {
 }
 @media (min-width: 768px) {
   .dashboard__info {
+    text-align: start;
     row-gap: 40px;
     max-width: 728px;
   }

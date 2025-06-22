@@ -26,12 +26,14 @@
 
 .dashboard__info {
   justify-self: center;
+  text-align: center;
   display: grid;
   grid-template-rows: max-content max-content max-content;
   row-gap: 28px;
   max-width:500px;
 
        @include tablet-min-width {
+        text-align: start;
         row-gap: 40px;
         max-width: 728px;
       }
