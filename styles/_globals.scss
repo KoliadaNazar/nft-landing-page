@@ -1,0 +1,92 @@
+body {
+  font-family: var(--font-family-base);
+  user-select: none;
+  background: var( --main-bg);
+  color: var(--white);
+}
+
+a, button , input, textarea, svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a, button {
+    transition: transform 0.2s ease;
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+a, button {
+  cursor: pointer!important;
+  all: unset;           
+  background: transparent; 
+}
+
+ h1 , h2 , h3, h4, h5, h6 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--font-family-base)
+ }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-family-base)
+}
+
+ picture {
+	display:block;
+  height: 100%;
+  width: 100%;
+ }
+
+ svg {
+	color:var(--white);  //change later!!!!!
+ }
+
+::-webkit-scrollbar {
+  height: 10px; /*высот адля горизонтального скролбара*/
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background:  rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;  
+  -ms-overflow-style: none;     /* Chrome, Safari, Opera */
+}
+
+.visually-hidden {
+  position: absolute;       /* убираем из потока */
+  width: 1px;               /* минимальный размер */
+  height: 1px;
+  overflow: hidden;         /* скрываем содержимое */
+  clip: rect(0 0 0 0);      /* обрезаем */
+  white-space: nowrap;      /* не переносим строки */
+}
+
+
+::-webkit-scrollbar {
+  height: 12px; /*высот адля горизонтального скролбара*/
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:  transparent;
+  border-radius: 8px;
+  border: 1px solid var(--button-violet);
+    box-shadow: inset 0 0 10px 6px rgba(173, 26, 175, 0.2);
+}

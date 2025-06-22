@@ -1,0 +1,116 @@
+
+.button {
+  padding: 4px 10px;
+  text-wrap: nowrap;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  height: 30px;
+  min-width: 120px;
+  font-size: 14px;
+
+  @include laptop-min-width {
+    height: 42px;
+    min-width: 188px;
+    font-size: 18px;
+  }
+  
+}
+
+.button:after,
+.button:before {
+  transition: background 0.2s ease-in-out;
+  position: absolute;
+  content: '';
+  background: var(--button-violet);
+  width: 3px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+
+    @include laptop-min-width {
+      width: 4px;
+      height: 22px;
+  }
+}
+
+.button:before {
+  left: 0px;
+}
+
+.button:after {
+  right: 0px;
+}
+
+
+.button__polygon {
+  transition: background 0.2s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  position: absolute;
+  width: calc(100% - 8px);
+  height: 100%;
+  clip-path: polygon(
+                      3% 12%, 0 12%, 0 0, 100% 0, 100% 12%, 97% 12%,
+                      97% 88%, 100% 88%, 100% 100%, 0 100%, 0 88%, 3% 88%);
+  background: var(--button-violet);
+
+    @include laptop-min-width {
+      width: calc(100% - 12px);
+  }
+}
+
+
+.button:hover:before,
+.button:hover:after,
+.button:hover .button__polygon {
+  background: var(--blue-button-hover);
+}
+
+.button:hover {
+  color: var(--black);
+}
+
+
+
+.button.button--medium {
+  height: 42px;
+  min-width: 188px;
+  font-size: 20px;
+
+    @include laptop-min-width {
+    height: 70px;
+    min-width: 260px;
+    font-size: 28px;
+  }
+}
+
+.button--medium:after,
+.button--medium:before {
+  transition: background 0.2s ease-in-out;
+  position: absolute;
+  content: '';
+  background: var(--button-violet);
+  width: 4px;
+  height: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+    @include laptop-min-width {
+      width: 5px;
+      height: 44px;
+      
+  }
+
+}
+
+.button--medium:before {
+  left: -2px;
+}
+
+.button--medium:after {
+  right: -2px;
+}

@@ -1,0 +1,26 @@
+
+.button-ternary {
+  transition: box-shadow 0.2s ease-in-out;
+
+  text-align: center;
+  padding: 8px 12px;
+  min-width: 108px;
+  min-height: 42px;
+  border: 1px solid var(--button-violet);
+  border-radius: 42px;
+  background: rgba(248, 29, 251, 0.05);
+  color: var(--white);
+  font-weight: 500;
+
+    @include laptop-min-width {
+      min-width: 124px;
+      min-height: 48px;
+      font-size: 14px;
+    }
+}
+
+.button-ternary:hover {
+  box-shadow: 
+  0 0 10px 6px rgba(173, 26, 175, 0.2),
+  inset 0 0 10px 6px rgba(173, 26, 175, 0.2);
+}
