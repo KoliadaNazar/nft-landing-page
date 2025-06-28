@@ -80,7 +80,7 @@ body::-webkit-scrollbar {
 
 
 ::-webkit-scrollbar {
-  height: 12px; /*высот адля горизонтального скролбара*/
+  height: 8px; /*высот адля горизонтального скролбара*/
   width: 20px;
 }
 
@@ -89,4 +89,13 @@ body::-webkit-scrollbar {
   border-radius: 8px;
   border: 1px solid var(--button-violet);
     box-shadow: inset 0 0 10px 6px rgba(173, 26, 175, 0.2);
+}
+
+@supports (-moz-appearance: none) {
+  ::-webkit-scrollbar { display: none; } /* Отключаем WebKit-скроллбар */
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--button-violet) var(--violet-transparent);
+  }
 }

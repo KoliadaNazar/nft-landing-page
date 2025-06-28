@@ -2,9 +2,12 @@
   width: 100%;
   max-width: 1918px;
   margin: 0 auto;
+
 }
 
 .dashboard__inner {
+  position: relative;
+  z-index: 10;
   padding: 4% 0 0 4%;
   display: grid;
   row-gap: 34px;
@@ -77,11 +80,7 @@
       @include desktop-min-width { margin-top: 60px;}
 }
 
-
-
-
-
-
+//------cards
 
 .dashboard__cards {
   max-width: 100%;
@@ -91,6 +90,7 @@
   display: grid;
   grid-template-columns: max-content max-content max-content;
   overflow-x: auto;
+  
 
    @include desktop-min-width {
       overflow-x: visible;

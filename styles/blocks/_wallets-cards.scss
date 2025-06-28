@@ -1,0 +1,14 @@
+.wallets {
+  margin: 0 auto;
+  max-width: 800px;
+     @include laptop-min-width {
+           max-width: 1918px;
+      }
+}
+
+
+.wallets__grid { 
+  display: grid;
+  grid-auto-flow: column;
+}           
+

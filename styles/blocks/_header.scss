@@ -13,23 +13,22 @@
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 70px 1fr;
 
-     @include mobile-min-width {
+    @include mobile-min-width {
       grid-template-columns: 1fr 1fr;
       padding: 14px 34px; 
       row-gap: 12px;
     }
 
-    @include laptop-min-width {
-           grid-template-columns: max-content 1fr max-content;
-           grid-template-rows: auto;
-           padding: 16px 30px; 
+      @include laptop-min-width {
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: auto;
+        padding: 16px 30px; 
       }
 
-    @include desktop-min-width {
-      padding: 40px 120px;
-      grid-template-columns: 1fr 1fr 1fr;
-      
-    }
+        @include desktop-min-width {
+          padding: 40px 120px;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
 }
 
 .header__nav {
