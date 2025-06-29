@@ -1,0 +1,125 @@
+.process {
+  display: grid;
+  justify-items: center;
+  row-gap: 14px;
+
+      @include desktop-min-width {
+          row-gap: 60px;
+      }
+}
+
+.process__heading {
+  position: relative;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 130px;
+
+    @include desktop-min-width {font-size: 64px; }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 80%;
+      height: 100%;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(173, 26, 175, 0.5);
+      filter: blur(120px);
+  
+      //border-radius: 50%;
+      //box-shadow:  
+      //  0 0 90px 90px rgba(173, 26, 175, 0.1),
+      //  inset 0 0 90px 90px rgba(173, 26, 175, 0.1);
+
+         @include desktop-min-width {
+          background: rgba(173, 26, 175, 0.7);
+          filter: blur(200px);
+          bottom: -50%;
+        }
+    }
+  
+  }
+
+
+.process__icon {
+  color: var(--voilet-bright);
+  position: relative;
+  z-index: 1;
+}
+
+.process__grid {
+  display: grid;
+  row-gap: 28px;
+
+    @include desktop-min-width {
+      grid-auto-flow: column;
+      column-gap: 16px;
+    }
+}
+
+.process__grid-item {
+  display: grid;
+  grid-row-gap: 20px;
+  place-items: center;
+}
+
+.process__separator {
+  transform: rotate(90deg) translate(6%, 50%);
+  height: 174px;
+  display: block;
+  transform-origin: center;
+
+    @include desktop-min-width {
+         transform: none;
+         height: auto;
+         display: grid;
+         align-items: center;
+    }
+}
+
+.process__separator--short {
+  transform: rotate(90deg) translate(18%, 50%);
+  height: 126px;
+
+     @include desktop-min-width {
+         transform: none;
+         height: auto;
+    }
+}
+
+.process__icon-circle {
+  position: relative;
+  @include flex-center;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+
+    &:after{
+      position: absolute;
+      content: '';
+      @include full-size;
+      inset: 0;
+      background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: -1;
+      border-radius: 50%;
+      box-shadow: 0 0 6px 8px rgba(173, 26, 175, 0.2);
+    }
+
+    &:hover:after {
+      opacity: 1;
+       
+    }
+}
+
+
+.process__text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  white-space: nowrap;
+}

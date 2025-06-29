@@ -7,10 +7,12 @@
 
 
 
-@import 'blocks/header',
+@import 'blocks/layout',
+        'blocks/header',
         'blocks/button',
         'blocks/button-second',
         'blocks/button-ternary',
         'blocks/dashboard',
         'blocks/intro',
-        'blocks/wallets-cards';
+        'blocks/wallets-cards',
+        'blocks/how-works';

@@ -1,14 +1,87 @@
 .wallets {
+  width: 100%;
   margin: 0 auto;
-  max-width: 800px;
-     @include laptop-min-width {
-           max-width: 1918px;
-      }
+  max-width: 1860px;
+}
+
+.wallets__inner {
+  padding-inline-start: 12px;
+  width: 100%;
+
+     @include mobile-min-width {
+      padding-inline-start: 34px;
+    }
+      @include tablet-min-width {padding-inline-start: 60px;}
+      
+      @include desktop-min-width {padding-inline-start: 120px;}
+
+
 }
 
 
 .wallets__grid { 
+  padding-inline-end: 14px;
+  overflow-x: auto;
   display: grid;
   grid-auto-flow: column;
-}           
+  grid-auto-columns: 220px;
+  column-gap: 24px;
 
+    @include desktop-min-width {
+      padding-inline-end: 20px;
+      grid-auto-columns: 272px;
+      column-gap: 60px;
+    }
+  
+}          
+
+.wallets__grid-item {
+  margin-bottom: 12px;
+  height: 270px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 16px;
+
+    @include desktop-min-width {
+      height: 332px;
+    }
+}
+
+.wallets__link {
+  place-self: center;
+  @include flex-center;
+  width: 150px;
+  height: 150px;
+  clip-path: circle(50%);
+  background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease-in-out;
+
+    @include desktop-min-width {
+      width: 200px;
+      height: 200px;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+    }
+}
+
+.wallets__img {
+  width: 90px;
+  height: 90px;
+
+    @include desktop-min-width {
+      width: 114px;
+      height: 114px;
+    }
+}
+
+.wallets__text {
+  padding-bottom: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
